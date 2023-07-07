@@ -1,0 +1,61 @@
+//INPUT & BUTTON ---------------------------------------
+
+.inputDiv {
+    min-height: 178px;
+    min-width: 706px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 30px 0 30px;
+    gap: 30px;
+}
+
+.input {
+    display: flex;
+    align-items: center;
+    flex: 3 0;
+    font-size: large;
+    border: none;
+    border-radius: 5px;
+    padding: 12px;
+    box-shadow: -1px 1px 5px 0px black;
+    line-height: 1.8;
+}
+
+.button {
+    flex: 1 0;
+    color: black;
+    background-color: gainsboro;
+    border-radius: 8px;
+    padding: 8px;
+    border: none;
+    max-height: 64px;
+    opacity: 0.8;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 2.8;
+    min-width: 200px;
+    font-family: "Shadows Into Light", cursive;
+    font-size: calc(2rem + 0.6vmin);
+    font-weight: 600;
+}
+
+.button:hover {
+    &:before {
+            left: 70%;
+            right: auto;
+            transform: skew(-8deg) translateX(-50%);
+            bottom:546px;
+            width: 116px;
+            background: #fedc2a;
+            content: "";
+            height: 18px;
+            position: absolute;
+            top: auto;
+            z-index: -1;
+        }
+}
+
+//-------------------------------------------------------
+

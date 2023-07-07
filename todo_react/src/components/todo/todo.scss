@@ -1,0 +1,14 @@
+.inputValueDiv {
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 30px 20px 30px;
+    font-size: calc(1.6rem + 0.6vmin);
+    min-width: 450px;
+    border-radius: 25px;
+    margin: 18px;
+    border: 0.2rem solid white;
+    background: gainsboro;
+    color: black;
+    opacity: 0.86;
+    gap: 8px;
+}
