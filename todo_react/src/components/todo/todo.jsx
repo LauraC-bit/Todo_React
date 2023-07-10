@@ -1,14 +1,14 @@
-import './todo.scss';
-import { useState } from 'react';
+import "./todo.scss";
+import { useState } from "react";
 
 const Todo = (props) => {
-  const {inputValue} = props;
-
+  const { arrayInput } = props;
 
   return (
-      <div className="inputValueDiv"><span>{inputValue}</span></div>
+    <div className="inputValueDiv">
+      <span>{arrayInput}</span>
+    </div>
   );
 };
-
 
 export default Todo;
