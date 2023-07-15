@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Shadows+Into+Light&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Shadows+Into+Light&display=swap");
 // font-family: 'Dancing Script',
 //     cursive;
 //     font-family: 'Shadows Into Light',
@@ -54,7 +53,8 @@ body {
   left: 0;
   bottom: 0;
   right: 0;
-  background: url(../../assets/pexels-evie-shaffer-3357695.jpg) fixed no-repeat center;
+  background: url(../../assets/pexels-evie-shaffer-3357695.jpg) fixed no-repeat
+    center;
   background-size: cover;
   opacity: 0.3;
   content: "";
@@ -74,9 +74,8 @@ body {
   width: 190px;
   background: #fedc2a;
   content: "";
-  height: .4em;
+  height: 0.4em;
   position: absolute;
-  top: auto;
+  top: 148px;
   z-index: -1;
-    
 }
