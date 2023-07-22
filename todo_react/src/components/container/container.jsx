@@ -8,7 +8,7 @@ function App() {
       <header className="container-header">
        <h1 className="h1-style">ToDoList !</h1>
       </header>
-      <main className="main">
+      <main>
         <Main />
       </main>
     </div>

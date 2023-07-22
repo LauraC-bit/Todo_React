@@ -32,9 +32,11 @@ const Main = (props) => {
     }
 
     setinputValue("");
+
   };
 
   let deleteTodo = () => {
+    let trash = document.getElementById("trash");
     setArrayInput(
       arrayInput.filter((element) => {
         if (element.isComplete === true) {
@@ -44,10 +46,16 @@ const Main = (props) => {
         }
       })
     );
+    let crossElements = document.querySelectorAll(".cross");
+    crossElements.forEach((element) => {
+      element.classList.remove("cross");
+    })
+    trash.classList.add("disabled")
+    trash.classList.remove("trash-can")
   };
 
   return (
-    <div>
+    <div className="main">
       <div className="inputDiv">
         <input
           className="input"
@@ -64,7 +72,7 @@ const Main = (props) => {
       {arrayInput.map((element, index) => (
         <Todo key={index} arrayInput={element} />
       ))}
-      <div className="trash-can" onClick={(e) => deleteTodo()}>
+      <div id="trash" className="disabled" onClick={(e) => deleteTodo()}>
         <img
           src={trash}
           className="svg"

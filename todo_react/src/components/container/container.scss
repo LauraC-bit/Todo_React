@@ -64,6 +64,11 @@ body {
 .h1-style {
   font-family: "Shadows Into Light", cursive;
   font-size: calc(8rem + 0.6vmin);
+
+  @media only screen and (max-width: 1200px) {
+      font-size: calc(6rem + 0.6vmin);
+      margin-bottom: 48px;
+    }
 }
 
 .h1-style:before {
@@ -78,4 +83,8 @@ body {
   position: absolute;
   top: 148px;
   z-index: -1;
+  @media only screen and (max-width: 1200px) {
+      top: 128px;
+      width: 166px;
+    }
 }

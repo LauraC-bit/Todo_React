@@ -8,6 +8,9 @@
   justify-content: center;
   padding: 0 30px 0 30px;
   gap: 30px;
+  @media only screen and (max-width: 1200px) {
+      flex-direction: column;
+    }
 }
 
 .input {
@@ -20,6 +23,10 @@
   padding: 12px;
   box-shadow: -1px 1px 5px 0px black;
   line-height: 1.8;
+  @media only screen and (max-width: 1200px) {
+      width: 550px;
+      flex: 0;
+    }
 }
 
 .button {
@@ -39,11 +46,14 @@
   font-family: "Shadows Into Light", cursive;
   font-size: calc(2rem + 0.6vmin);
   font-weight: 600;
+  @media only screen and (max-width: 1200px) {
+      margin-top: 38px;
+    }
 }
 
 .button:hover {
   &:before {
-    left: 73%;
+    left: 70%;
     right: auto;
     transform: skew(-8deg) translateX(-50%);
     bottom: 546px;
@@ -52,9 +62,20 @@
     content: "";
     height: 18px;
     position: absolute;
-    top: 368px;
+    top: 372px;
     z-index: -1;
+    @media only screen and (max-width: 1200px) {
+        left: 50%;
+        top: 386px;
+        width: 126px;
+      }
   }
 }
 
 //-------------------------------------------------------
+
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}

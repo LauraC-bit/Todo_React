@@ -31,7 +31,7 @@
   justify-content: space-between;
   padding: 20px 30px 20px 30px;
   font-size: calc(1.6rem + 0.6vmin);
-  max-width: 521px;
+  min-width: 521px;
   border-radius: 25px;
   margin: 18px;
   border: 0.2rem solid white;
@@ -39,6 +39,10 @@
   color: black;
   opacity: 0.86;
   gap: 8px;
+    @media only screen and (max-width: 1200px) {
+      justify-content: center;
+      margin: 38px 18px 18px 18px;
+    }
 }
 
 .trash-can {
@@ -47,8 +51,8 @@
     cursor: pointer;
   }
   position: absolute;
-  top: 488px;
-  left: 827px;
+  top: 348px;
+  left: 992px;
   z-index: 1;
   width: 66px;
   height: 66px;
@@ -57,6 +61,18 @@
   border-radius: 25px;
   opacity: 0.83;
   cursor: pointer;
+
+  @media only screen and (max-width: 1200px) {
+       top: 358px;
+       left: 728px;
+  }
+  @media only screen and (max-width: 960px) {
+      left: 603px;
+  }
+  @media only screen and (max-width: 730px) {
+      left: 502px;
+  }
+
 }
 
 .svg {
