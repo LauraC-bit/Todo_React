@@ -1,12 +1,14 @@
 import "./main.scss";
 import trash from "../../assets/trash-can-solid.svg";
 import { useState } from "react";
+import { useEffect } from "react";
 import Todo from "../todo/todo.jsx";
 
 const Main = (props) => {
-  // const {} = props;
   const [inputValue, setinputValue] = useState("");
   const [arrayInput, setArrayInput] = useState([]);
+  const [items, setItems] = useState([]);
+ 
 
   const UpdateValue = (value) => {
     setinputValue(value);
@@ -16,6 +18,7 @@ const Main = (props) => {
     if (!inputValue || inputValue === "") {
       return;
     }
+
     if (arrayInput.length === 0) {
       setArrayInput([
         {
@@ -32,27 +35,42 @@ const Main = (props) => {
     }
 
     setinputValue("");
-
+    setItems(arrayInput)
   };
 
   let deleteTodo = () => {
     let trash = document.getElementById("trash");
-    setArrayInput(
-      arrayInput.filter((element) => {
+    const udaptedItems = arrayInput.filter((element) => {
         if (element.isComplete === true) {
-          return false; //ne push pas l'element dans le tableau car false (spécialité filter)
+          return false //ne push pas l'element dans le tableau car false (spécialité filter)
         } else {
           return true; //push l'element dans le tableau car true (spécialité filter)
         }
       })
-    );
+    setArrayInput(udaptedItems);
+    localStorage.setItem("items", JSON.stringify(udaptedItems)) //permet de venir à écraser le tableau précèdent de local Storage avec le nouveau tableau visuel html (setarrayinput) 
+    //dans le local storage.
+
     let crossElements = document.querySelectorAll(".cross");
     crossElements.forEach((element) => {
       element.classList.remove("cross");
-    })
-    trash.classList.add("disabled")
-    trash.classList.remove("trash-can")
+    });
+    trash.classList.add("disabled");
+    trash.classList.remove("trash-can");
   };
+
+  useEffect(() => {
+    localStorage.setItem("items", JSON.stringify(arrayInput));
+  }, [items]);
+
+  useEffect(() => {
+    const items = JSON.parse(localStorage.getItem("items"));
+    if (items) {
+      setItems(items);
+    }
+  }, []);
+
+  
 
   return (
     <div className="main">

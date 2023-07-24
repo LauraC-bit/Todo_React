@@ -15,6 +15,7 @@ const Todo = (props) => {
       arrayInput.isComplete = true;
       trash.classList.remove("disabled")
       trash.classList.add("trash-can")
+      // écrire dans return dans la partie concernee className={(nav) => (nav.isActive ? "nav-active" : "") ternaire pour changer de classe
     }
   };
 
